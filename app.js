@@ -71,3 +71,13 @@ todos.forEach((todo) => {
     p.textContent = todo.text;
     body.appendChild(p)
 })
+
+
+document.getElementById('addBtn').addEventListener('click', (e) => {
+    e.target.textContent = "add a Todo"
+})
+document.getElementById('removeAll').addEventListener('click', () => {
+    document.querySelectorAll("p").forEach((todo) => {
+        todo.remove()
+    })
+})
