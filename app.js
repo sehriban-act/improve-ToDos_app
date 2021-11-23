@@ -1,12 +1,12 @@
 const todos = [{
     text: 'Order cat food',
-    completed: true
+    completed: false
 }, {
     text: 'Clean kitchen',
     completed: true
 }, {
     text: 'Buy food',
-    completed: true
+    completed: false
 }, {
     text: 'Do work',
     completed: true
@@ -24,3 +24,12 @@ const deleteTodo = function (todos, todoText) {
 }
 deleteTodo(todos, "do work")
 console.log(todos);
+
+const getThingsToDo = function (todos) {
+    return todos.filter(function (todo) {
+        return !todo.completed
+
+    })
+}
+
+console.log(getThingsToDo(todos));
