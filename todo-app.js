@@ -14,13 +14,14 @@ document.querySelector('#search-text').addEventListener('input', function (e) {
 
 document.querySelector('#new-todo').addEventListener('submit', function (e) {
     e.preventDefault()
+    const id = uuidv4();
     todos.push({
-        id: uuidv4(),
+        id: id,
         text: e.target.elements.text.value,
         completed: false
     })
     saveTodos(todos)
-    renderTodos(todos, filters)
+    location.assign(`edit.html#${id}`)
     e.target.elements.text.value = ''
 })
 
