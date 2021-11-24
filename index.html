@@ -1,31 +1,19 @@
 <!DOCTYPE html>
 
 <html>
-
-<head></head>
-
-<body>
-    <h1>Todos</h1>
-    <input id="search-text" type="text" placeholder="Filter todos">
-    <label>
-        <input type="checkbox" name="hideText" id="hide">
-        Hide Completed
-    </label><br>
-    <select name="" id="orderBy">
-        <option value="byAlphabetical">Order by Alphabetically </option>
-        <option value="byRecentlyAdd">Order by Recently Added </option>
-        <option value="byDueDate">Order by Due date</option>
-
-    </select>
-
-
-
-    <div id="todos"></div>
-    <form id="addForm">
-        <input type="text" name="addText" id="addTodo" placeholder="add something to do">
-        <button type="submit">Add</button>
-    </form>
-    <script src="todo-app.js"></script>
-</body>
-
+    <head></head>
+    <body>
+        <h1>Todos</h1>
+        <input id="search-text" type="text" placeholder="Filter todos">
+        <label>
+            <input type="checkbox" id="hide-completed"> Hide completed
+        </label>
+        <div id="todos"></div>
+        <form id="new-todo">
+            <input type="text" placeholder="Something to do" name="text">
+            <button>Add Todo</button>
+        </form>
+        <script src="todo-functions.js"></script>
+        <script src="todo-app.js"></script>
+    </body>
 </html>
